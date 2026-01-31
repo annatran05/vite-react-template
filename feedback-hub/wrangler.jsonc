@@ -1,0 +1,50 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "feedback-hub",
+	"main": "worker/index.ts",
+	"compatibility_date": "2026-01-28",
+	
+	/**
+	 * D1 Database
+	 */
+	"d1_databases": [
+	  {
+		"binding": "DB",
+		"database_name": "feedback-db",
+		"database_id": "ad5726e9-eef3-4e06-8c0a-f9079b6e3e8e"
+	  }
+	],
+	
+	/**
+	 * Workers AI
+	 */
+	"ai": {
+	  "binding": "AI"
+	},
+	
+	/**
+	 * KV Namespace
+	 */
+	"kv_namespaces": [
+	  {
+		"binding": "CACHE",
+		"id": "cf27944cad28481d95253f9b5b7c7b19"
+	  }
+	],
+	
+	/**
+	 * Static Assets
+	 */
+	"assets": {
+	  "directory": "./dist",
+	  "not_found_handling": "single-page-application"
+	},
+	
+	/**
+	 * Observability
+	 */
+	"observability": {
+	  "enabled": true
+	}
+  }
+  
